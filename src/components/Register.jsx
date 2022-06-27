@@ -40,7 +40,7 @@ const Register = () => {
         onSubmit = {values => {
             console.log(values);
             localStorage.setItem('values', JSON.stringify([...data,values]));
-            toast.success("Register success",{
+            toast.success(" success",{
                 position: "top-center",
             })
             navigate('/login');
