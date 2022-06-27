@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Joan&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+html {
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    color: rgb(35, 33, 33);
+}
+
+body {
+    min-height: 100vh;
+    background-color: rgb(185, 210, 235);
+   
+}
+/* for signup page */
+.registerform{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.registerform input{
+    display:flex;
+    height: 35px;
+    width: 80%;
+}
+.registerform .reg{
+    margin-top: 10px;
+    width: 30%;
+    height: 30px;
+    border: none;
+}
+.registerform .reg:hover{
+    background-color: rgb(37, 123, 189);
+    cursor: pointer;
+}
+.registerform .reset{
+    width:  30%;
+    height: 30px;
+    margin-left: 5px;
+    border: none;
+}
+.registerform .reset:hover{
+    background-color: red;
+    cursor: pointer;
+}
+
+.registerform a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.registerform a:hover{
+    color: rgb(229, 26, 29);
+}
+
+/* for page not found */
+.pagenotfound{
+    color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20%;
+    font-size: 3rem;
+}
+
+.msg .errormsg{
+    color:red;
+}
