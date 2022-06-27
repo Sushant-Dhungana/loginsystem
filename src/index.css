@@ -30,22 +30,32 @@ body {
     display:flex;
     height: 35px;
     width: 80%;
+    border-radius: 10px !important;
 }
 .registerform .reg{
+    color: black;
     margin-top: 10px;
-    width: 30%;
-    height: 30px;
+    width: 35%;
+    height: 40px;
     border: none;
+    background-color: rgb(109, 174, 76);
+    text-transform: lowercase;
 }
 .registerform .reg:hover{
-    background-color: rgb(37, 123, 189);
+    background-color: rgb(160, 241, 19);
     cursor: pointer;
 }
 .registerform .reset{
-    width:  30%;
-    height: 30px;
+    margin-top: 10px;
+    width:  40%;
+    height: 40px;
     margin-left: 5px;
     border: none;
+    background-color: chocolate;
+    align-items: center;
+    justify-content: center;
+    text-transform: lowercase;
+    color: black;
 }
 .registerform .reset:hover{
     background-color: red;
@@ -54,7 +64,7 @@ body {
 
 .registerform a{
     text-decoration: none;
-    color: black;
+    color: rgb(25, 28, 225);
     cursor: pointer;
 }
 .registerform a:hover{
@@ -74,3 +84,48 @@ body {
 .msg .errormsg{
     color:red;
 }
+
+/* for login page */
+
+.loginform{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.loginform input{
+    margin-top: 10px;
+    height: 40px;
+    width: 30vh;
+    border-radius: 10px !important;
+}
+.loginform .loginbtn{
+    margin-top: 20px;
+   color: rgb(17, 17, 18);
+   background-color: rgb(76, 174, 141);
+   margin-left: 50px;
+   text-transform: lowercase;
+}
+.loginform .loginbtn:hover{
+    background-color: crimson;
+    transform: scale(0.8);
+}
+
+.loginform .logintog{
+    margin-top: 20px;
+    
+}
+
+.loginform a{
+    text-decoration: none;
+    color: rgb(15, 41, 244);
+    cursor: pointer;
+}
+.loginform a:hover{
+  color: red;
+}
+
+
+

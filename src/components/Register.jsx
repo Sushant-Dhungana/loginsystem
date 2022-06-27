@@ -6,6 +6,11 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Button } from "@mui/material";
+import SendIcon from '@mui/icons-material/Send';
+import DeleteIcon from '@mui/icons-material/Delete';
+
+
 
 const Register = () => {
     const navigate = useNavigate();
@@ -50,16 +55,17 @@ const Register = () => {
           <div>
             <h1> Sign Up</h1>
             <Form>
-              <TextField label="User Name:" name="userName" type="text" />
-              <TextField label="Email:" name="email" type="email" />
-              <TextField label="Password:" name="password" type="password" />
+              <TextField label="User Name:" name="userName" type="text" placeholder="Enter user name" />
+              <TextField label="Email:" name="email" type="email" placeholder="Enter your email" />
+              <TextField label="Password:" name="password" type="password" placeholder="Enter password"/>
               <TextField
                 label="Confirm Password:"
                 name="confirmPassword"
                 type="password"
+                placeholder="re-enter your password"
               />
-              <button type="submit" className="reg">Register</button>
-              <button type="reset" className="reset">Reset</button>
+              <Button type="submit" className="reg" endIcon={<SendIcon />} >Register</Button>
+              <Button type="reset" className="reset" startIcon={<DeleteIcon />}>Reset</Button>
             </Form>
             <p style={{marginTop:"20px"}}>Already have an account?
             <Link to="/login" >Login</Link>

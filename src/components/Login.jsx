@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import Button from "react-bootstrap/Button";
+import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import SendIcon from '@mui/icons-material/Send';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -98,8 +99,10 @@ const Login = () => {
             variant="primary"
             className="loginbtn"
             onClick={addData}
-            style={{ background: "rgb(67, 185, 127)" }}
+                        
+       
             type="submit"
+            endIcon={<SendIcon />}
           >
             Submit
           </Button>
