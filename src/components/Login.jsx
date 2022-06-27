@@ -30,6 +30,11 @@ const Login = () => {
 
     const getuserArr = localStorage.getItem("values");
     console.log(getuserArr);
+    if(getuserArr === null){
+        toast.error("Doesnot have an account register",{
+            position: "bottom-center"
+        })
+    }
 
     const { email, password } = inpval;
     if (email === "") {
@@ -48,15 +53,15 @@ const Login = () => {
       toast.error("password must contain atleast 8 characters", {
         position: "top-center",
       });
-    } else {
+    }else {
       if (getuserArr && getuserArr.length) {
         const userData = JSON.parse(getuserArr);
         const userLogin = userData.filter((el, k) => {
           return el.email === email && el.password === password;
-        });
+        })
 
         if (userLogin.length === 0) {
-          toast.error("please enter correct password", {
+          toast.error("please enter correct details", {
             position: "top-center",
           });
         } else {

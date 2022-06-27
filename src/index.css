@@ -127,5 +127,18 @@ body {
   color: red;
 }
 
+.dash .logoutbtn{
+    
+    color: black;
+    text-transform: lowercase;
+    background-color: aquamarine;
+    margin-left: 30vh;
+    margin-top: 20vh;
+}
+.dash .logoutbtn:hover{
+    background-color: brown;
+    cursor: pointer;
+}
+
 
 

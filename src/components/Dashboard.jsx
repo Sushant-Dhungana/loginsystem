@@ -6,6 +6,7 @@ import Fade from '@mui/material/Fade';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { useNavigate } from "react-router";
+import LogoutIcon from '@mui/icons-material/Logout';
 
 const Dashboard = () => {
     const navigate = useNavigate();
@@ -58,8 +59,13 @@ const Dashboard = () => {
         "error"
       ) : (
         <>
-          <h1>{logindata[0].userName}</h1>
-          <Button onClick={userLogout}>Logout</Button>
+        <div className="dash">
+          <h6>User Name = {logindata[0].userName}</h6>
+          <h6>User Name = {logindata[0].email}</h6>
+          <h6>User Name = {logindata[0].userName}</h6>
+          <h6>User Name = {logindata[0].email}</h6>
+          <Button onClick={userLogout} className="logoutbtn" >Logout  <LogoutIcon/></Button>
+          </div>
           {
             logindata[0].userName !== ""  ?
             <Modal
@@ -83,7 +89,7 @@ const Dashboard = () => {
                   {logindata[0].userName}
                 </Typography>
                 <Typography id="transition-modal-description" sx={{ mt: 2 }}>
-                 welcome everyone
+                 Welcome to this page
                 </Typography>
               </Box>
             </Fade>
