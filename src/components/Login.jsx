@@ -75,7 +75,7 @@ const Login = () => {
             position: "top-center",
           });
         } else {
-          navigate("/dashboard"); //navigates to dashboard on successful login
+          navigate("/login/dashboard"); //navigates to dashboard on successful login
          
   }}}};
 
