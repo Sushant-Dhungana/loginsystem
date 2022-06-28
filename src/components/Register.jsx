@@ -4,7 +4,7 @@ import TextField from "./TextField"; //fetching data from another component for 
 import * as Yup from "yup";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Button } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
@@ -14,6 +14,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 
 const Register = () => {
     const navigate = useNavigate();
+    // eslint-disable-next-line no-unused-vars
     const [data, setData]= useState([])
     
     //yup form validation
@@ -27,7 +28,7 @@ const Register = () => {
       .max(10, "Password must be at most 10 characters")
       .required("password is required")
       .matches(
-        /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-10])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
+        /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-10])(?=.*[!@#%^&*])(?=.{8,})/,
         "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"
       ),
     confirmPassword: Yup.string()

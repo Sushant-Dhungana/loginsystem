@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { useNavigate } from "react-router";
 import LogoutIcon from '@mui/icons-material/Logout';
+import PageNotFound from "./PageNotFound";
 
 const Dashboard = () => {
     const navigate = useNavigate();
@@ -61,7 +62,7 @@ const Dashboard = () => {
   return (
     <>
       {logindata.length === 0 ? (
-        <div className="error">Error</div>
+        <PageNotFound/>
       ) : (
         <>
         <div className="dash">
