@@ -127,6 +127,8 @@ body {
   color: red;
 }
 
+/* for dashboard */
+
 .dash .logoutbtn{
     
     color: black;
@@ -140,6 +142,7 @@ body {
     cursor: pointer;
 }
 
+/* for error page */
 .error{
     display: flex;
     align-items: center;

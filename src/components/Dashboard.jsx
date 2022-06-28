@@ -35,10 +35,11 @@ const Dashboard = () => {
       setLoginData(user);
     }
 
-    const userData = logindata.map((el, k) => {
-      return el.userName;
+    const userData = logindata.map((data, k) => {
+      return data.userName;
     });
 
+    //model appears after 3 sec i.e 3000ms
     if (userData) {
       setTimeout(() => {
         handleOpen();
@@ -49,6 +50,8 @@ const Dashboard = () => {
     UserData();
   }, []);
 
+
+  // for removal of data and logout features
   const userLogout = () =>{
     localStorage.removeItem('values');
     navigate('/')

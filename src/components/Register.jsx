@@ -1,6 +1,6 @@
 import { Formik, Form } from "formik";
 import React,{ useState} from "react";
-import TextField from "./TextField";
+import TextField from "./TextField"; //fetching data from another component for reusability
 import * as Yup from "yup";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -15,6 +15,8 @@ import DeleteIcon from '@mui/icons-material/Delete';
 const Register = () => {
     const navigate = useNavigate();
     const [data, setData]= useState([])
+    
+    //yup form validation
   const validate = Yup.object({
     userName: Yup.string()
       .max(15, "must be 4 to 10 characters")

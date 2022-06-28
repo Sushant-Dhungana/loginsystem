@@ -5,13 +5,15 @@ import {Routes, Route} from 'react-router-dom'
 import Login from "./components/Login";
 import Dashboard from './components/Dashboard'
 import PageNotFound from './components/PageNotFound';
+ 
+//routing for different routes or components
 
 function App() {
   return (
     <div className="App">
       <Navbar/>
     <Routes>
-      <Route path='/' element={<Register/>}></Route>
+      <Route path='/' element={<Register/>}></Route> 
       <Route path='/login' element={<Login/>}></Route>
       <Route path='/dashboard' element={<Dashboard/>}></Route>
       <Route path='/*' element={<PageNotFound/>}></Route>

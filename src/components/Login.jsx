@@ -39,7 +39,7 @@ const Login = () => {
 
     //checks if returned array is null or has an account
     if(getuserArr === null){
-        toast.error("Doesnot have an account register",{
+        toast.error("Doesnot have an account..? register",{
             position: "bottom-center"
         })
     }
