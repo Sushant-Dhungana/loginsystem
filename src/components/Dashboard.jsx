@@ -31,7 +31,7 @@ const Dashboard = () => {
   const UserData = () => {
     const getUser = localStorage.getItem("values");
     if (getUser && getUser.length) {
-      const user = JSON.parse(getUser);
+      const user = JSON.parse(getUser) || [];
       //console.log(user)
       setLoginData(user);
     }
