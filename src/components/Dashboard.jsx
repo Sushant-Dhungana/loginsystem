@@ -10,6 +10,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
 
 const Dashboard = () => {
     const navigate = useNavigate();
+    // modal style
   const style = {
     position: "absolute",
     top: "50%",
@@ -24,8 +25,8 @@ const Dashboard = () => {
 
   const [logindata, setLoginData] = React.useState([]);
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleOpen = () => setOpen(true); //for opening of model
+  const handleClose = () => setOpen(false); //for closing of model
   const UserData = () => {
     const getUser = localStorage.getItem("values");
     if (getUser && getUser.length) {
@@ -56,7 +57,7 @@ const Dashboard = () => {
   return (
     <>
       {logindata.length === 0 ? (
-        "error"
+        <div className="error">Not found</div>
       ) : (
         <>
         <div className="dash">

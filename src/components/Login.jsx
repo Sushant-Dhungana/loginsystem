@@ -8,6 +8,8 @@ import SendIcon from '@mui/icons-material/Send';
 
 const Login = () => {
   const navigate = useNavigate();
+
+  //initial states
   const [inpval, setInpval] = useState({
     email: "",
     password: "",
@@ -18,25 +20,33 @@ const Login = () => {
     const { value, name } = e.target;
     // console.log(value,name);
 
+
+
     setInpval(() => {
-      return {
+      return { //returns name and email form inpval
         ...inpval,
         [name]: value,
       };
     });
   };
+
+  //get data from localstorage
   const addData = (e) => {
     e.preventDefault();
 
     const getuserArr = localStorage.getItem("values");
     console.log(getuserArr);
+
+    //checks if returned array is null or has an account
     if(getuserArr === null){
         toast.error("Doesnot have an account register",{
             position: "bottom-center"
         })
     }
 
-    const { email, password } = inpval;
+    //checks if returned value and entered value matches the condition
+
+    const { email, password } = inpval; 
     if (email === "") {
       toast.error("email field is requred", {
         position: "top-center",
@@ -55,9 +65,9 @@ const Login = () => {
       });
     }else {
       if (getuserArr && getuserArr.length) {
-        const userData = JSON.parse(getuserArr);
-        const userLogin = userData.filter((el, k) => {
-          return el.email === email && el.password === password;
+        const userData = JSON.parse(getuserArr); //to get an array in object format from local storage
+        const userLogin = userData.filter((data, k) => {
+          return data.email === email && data.password === password;
         })
 
         if (userLogin.length === 0) {
@@ -65,11 +75,9 @@ const Login = () => {
             position: "top-center",
           });
         } else {
-          navigate("/dashboard");
-        }
-      }
-    }
-  };
+          navigate("/dashboard"); //navigates to dashboard on successful login
+         
+  }}}};
 
   return (
     <>
@@ -124,4 +132,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Login
