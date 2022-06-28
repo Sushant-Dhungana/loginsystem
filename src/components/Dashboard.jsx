@@ -60,7 +60,7 @@ const Dashboard = () => {
   return (
     <>
       {logindata.length === 0 ? (
-        <div className="error">Not found</div>
+        <div className="error">Error</div>
       ) : (
         <>
         <div className="dash">
