@@ -48,7 +48,8 @@ const Dashboard = () => {
   };
   useEffect(() => {
     UserData();
-  }, []);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[]);
 
 
   // for removal of data and logout features
